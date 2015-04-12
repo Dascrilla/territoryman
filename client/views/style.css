@@ -1,0 +1,14 @@
+h1{
+    font-size: 28px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.app-cont{
+    background: rgb(247, 247, 247);
+    border: 1px solid rgb(224, 224, 224);
+    padding: 20px;
+}
+.app-cont img {
+    width: 180px;
+    border: 1px solid rgb(236, 236, 236)
+}

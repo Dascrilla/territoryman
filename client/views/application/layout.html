@@ -1,0 +1,26 @@
+<template name="layout">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    {{> header}}
+  <div id="main" class="container">
+    {{> errors}}
+    {{> yield}}
+  </div>
+
+</template>
+
+<!--
+<template name="layout">
+  
+{{#if isLanding}}
+	{{> landing}}
+ {{else}}
+  {{> header}}
+  <div id="main" class="container">
+    {{> errors}}
+      {{> yield}}
+  </div>
+{{/if}}
+
+</template>
+
+--> 

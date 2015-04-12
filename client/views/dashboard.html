@@ -1,0 +1,73 @@
+<template name= 'dashboard'>
+  <div class="container">
+    <div class="row">
+      <div class="page-header">
+       <h1>
+        SDR Territories
+          <form class="col-lg-4 pull-right" role="search">
+            <div class="form-group">
+              {{> searchBox}}
+            </div>
+          </form>
+        </h1>
+         
+      </div>
+      <div class="col-lg-12">
+
+        <table class="table table-striped table-condensed table-hover table-bordered">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>SalesForce ID</th>
+            <th>State</th>
+            <th>Market Segment</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#esEach index="reps"}}
+            {{> repItem}}
+          {{/esEach}}
+          </tbody>
+        </table>
+
+        {{#ifEsIsSearching index="reps"}}
+                  {{> loading}}
+          {{/ifEsIsSearching}}
+
+           {{#ifEsHasNoResults index="reps"}}
+            <div class="no-results">No results found!</div>
+        {{/ifEsHasNoResults}}
+
+      </div>
+    </div>
+  </div>
+    {{> upload}}
+</template>
+
+<template name="upload">
+  <input type="file" id="files" name="files[]" multiple />
+  <output id="list"></output>
+  <a class="clear btn btn-danger">Delete All Territories</a>
+</template>
+
+<template name="repItem">
+  <tr>
+    <td>
+      <a href={{pathFor 'repEdit'}}>{{name}}</a>
+    </td>
+    <td>
+      {{sfdc_id}}
+    </td>
+    <td>
+      {{state}}
+    </td>
+    <td>
+      {{market_segment}}
+    </td>
+  </tr>
+</template>
+
+<template name="searchBox">
+    {{> esInput index="reps" placeholder="Search..." }}
+</template>

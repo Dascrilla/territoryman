@@ -1,0 +1,42 @@
+<template name='repEdit'>
+	<form class="form-horizontal">
+  <fieldset>
+    <legend>New Rep</legend>
+
+    <div class="form-group">
+      <label for="name" class="col-lg-2 control-label">Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="name" name="name" value="{{name}}">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="sfdc_id" class="col-lg-2 control-label">Salesforce ID</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="sfdc_id" name="sfdc_id" value="{{sfdc_id}}">
+      </div>
+      </div>
+
+      <div class="form-group">
+      <label for="state" class="col-lg-2 control-label">State</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="state" name="state" value="{{state}}">
+      </div>
+      </div>
+
+    <div class="form-group">
+      <label for="market_segment" class="col-lg-2 control-label">Market Segment</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="market_segment" name="market_segment" value="{{market_segment}}">
+      </div>
+      </div>
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="cancel btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</template>

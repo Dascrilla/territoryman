@@ -1,0 +1,59 @@
+<template name='newRep'>
+	<form class="form-horizontal">
+  <fieldset>
+    <legend>New Rep</legend>
+
+    <div class="form-group">
+      <label for="name" class="col-lg-2 control-label">Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="sfdc_id" class="col-lg-2 control-label">Salesforce ID</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="sfdc_id" name="sfdc_id" placeholder="SFDC Rep ID">
+      </div>
+      </div>
+
+      <div class="form-group">
+      <label for="state" class="col-lg-2 control-label">State</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="state" name="state" placeholder="California">
+      </div>
+      </div>
+
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Market Segment</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="market_segment" id="smb" value="SMB">
+            SMB
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="market_segment" id="midMarket" value="Mid Market">
+          	Mid Market
+          </label>
+          </div>
+			<div class="radio">
+           <label>
+            <input type="radio" name="market_segment" id="enterprise" value="Enterprise">
+            Enterprise
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="cancel btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</template>
